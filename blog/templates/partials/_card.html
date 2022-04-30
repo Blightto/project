@@ -1,0 +1,14 @@
+{% load static %}
+
+  <div class="container mt-3">
+    <div class="row border border-2 py-2 rounded">
+      <div class="col-3">
+        <img src="{{ blog.image.url }}" class="card-img">
+      </div>
+      <div class="col-9">
+        <h5> {{ blog.title }} </h5>
+        <p> {{ blog.description |striptags|slice:"0:100" }} ... </p>
+        <a href="{% url 'yazidetay' blog.slug %}" class="btn btn-primary">Yazıya git</a>
+      </div>
+    </div>
+  </div>
